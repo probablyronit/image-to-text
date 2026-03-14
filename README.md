@@ -24,10 +24,10 @@ Image
 ResNet-50 (frozen, removes avg pool + FC)
   │  → [batch, 49, 2048]  (7×7 spatial feature map)
   ▼
-Attention Module  ←──────────────────────────┐
-  │  Computes context vector                 │
+Attention Module  ←─────────────────────────┐
+  │  Computes context vector                │
   │  α = softmax(W · tanh(Wh·h + Wf·f))     │
-  ▼                                          │
+  ▼                                         │
 LSTM Cell  ──── hidden state h_t ───────────┘
   │
   ▼
